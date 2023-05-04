@@ -44,8 +44,9 @@ img, picture, svg, video {
 /*nav*/
 nav {
     display:flex;
-    justify-content: space-between;
-    padding: 1rem 15em 0;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 10em;
 }
 
 nav img {
@@ -62,7 +63,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4em;
+    gap: 2em;
 }
 
 #nav-buttons {
@@ -311,7 +312,7 @@ input:checked + .slider:before {
 
 /*fourth-section*/
 #fourth-section {
-    background-color: #f7fbff;
+    background-color: #e2eff8;
     display: flex;
     justify-content: center;
     gap: 13em;
@@ -368,7 +369,6 @@ input:checked + .slider:before {
 
 /*footer*/
 footer {
-    flex: 1;
     background-color: #fff;
     color: #4c4d5f;
 }
@@ -396,20 +396,17 @@ footer a:hover {
 .ft-main-item {
     padding: 1.25rem;
     min-width: 12.5rem;
-}
+} 
 
 .ft-title {
     font-size: 1rem;
     font-weight: bold;
 }
 
-#first-ft-mi ul {
+.ft-main-item ul {
     margin-bottom: 2em;
 }
 
-#second-ft-mi ul {
-    margin-bottom: 2em;
-}
 
 /*media query*/
 @media (min-width: 29.8125rem){
