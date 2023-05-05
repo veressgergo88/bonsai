@@ -44,6 +44,7 @@ img, picture, svg, video {
 /*nav*/
 nav {
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 1rem 0;
     gap: 10em;
@@ -206,6 +207,23 @@ input:checked + .slider:before {
     -moz-box-shadow: -1px 2px 22px 0px rgba(0,0,0,0.18);
 }
 
+.sc-art-right {
+    position: relative;
+    overflow: hidden;
+}
+
+#ribbon {
+    position: absolute;
+    inset: 0 0 auto auto;
+    transform-origin: 0 1rem;
+    transform: translate(15%) rotate(45deg);
+    background: #00b289;
+    box-shadow: 0 0 0 10em #00b289;
+    clip-path: inset(-40% -100%);
+    color:#fff;
+    font-weight: bold;
+}
+
 .sc-articles-header {
     border-bottom: 2px solid #00b289;
 }
@@ -302,8 +320,8 @@ input:checked + .slider:before {
 }
 
 .t-s-a-right {
-    align-items: center;
-}
+    text-align: center;
+} 
 
 .t-s-a-right h2{
     font-size: 2rem;
@@ -315,6 +333,7 @@ input:checked + .slider:before {
     background-color: #e2eff8;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 13em;
     padding: 5em 0;
     margin: 4em 0;
@@ -329,15 +348,13 @@ input:checked + .slider:before {
 }
 
 #fourth-section button {
-    display: inline;
     border: none;
     border-radius: 0.2rem;
     background-color: #00b289;
     color:#fff;
     font-size: 0.8rem;
     font-weight: bold;
-    margin: 0.8rem 0;
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem;
 }
 
 /*fifth-section*/
@@ -384,9 +401,10 @@ footer a:hover {
 
 
 .ft-main {
-    padding: 1.25rem 1.875rem;
+    padding: 1.25rem 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10em;
 }
 
 .ft-main h2 {
@@ -395,7 +413,6 @@ footer a:hover {
 
 .ft-main-item {
     padding: 1.25rem;
-    min-width: 12.5rem;
 } 
 
 .ft-title {
@@ -409,14 +426,85 @@ footer a:hover {
 
 
 /*media query*/
-@media (min-width: 29.8125rem){
-    .ft-main {
-        justify-content: space-around;
-    }
-}
+@media (max-width: 30em){
 
-@media (min-width: 77.5rem) {
+    nav {
+        display:flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    nav img {
+        margin: 0 auto;
+    }
+
+    nav ul {
+        align-items: baseline;
+    }
+
+    #nav-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    main {
+        padding: 1em 1em;
+    }
+
+    #first-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    #second-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        color:#4c4d5f; 
+    }
+
+    #article-header-text {
+        text-align: center;
+    }
+
+    .third-section-articles {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .t-s-a-left {
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    #fourth-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+        padding: 2rem 0;
+    }
+
+    #fourth-section button {
+        border: none;
+        border-radius: 0.2rem;
+        background-color: #00b289;
+        color:#fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 1rem 2.5rem;
+    }
+
+    #faq-article {
+        gap: 2em;
+    }
+    
     .ft-main {
-        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 0.5em;
+        margin-left: 4.5em;
     }
 }
